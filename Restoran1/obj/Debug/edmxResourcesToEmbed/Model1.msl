@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Restoran1ModelStoreContainer" CdmEntityContainer="Restoran1Entities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="Restoran1Model.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="nama" ColumnName="nama" />
+          <ScalarProperty Name="telp" ColumnName="telp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mejas">
+      <EntityTypeMapping TypeName="Restoran1Model.Meja">
+        <MappingFragment StoreEntitySet="Meja">
+          <ScalarProperty Name="noMeja" ColumnName="noMeja" />
+          <ScalarProperty Name="jenis" ColumnName="jenis" />
+          <ScalarProperty Name="kapasitas" ColumnName="kapasitas" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="Restoran1Model.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="jenis" ColumnName="jenis" />
+          <ScalarProperty Name="harga" ColumnName="harga" />
+          <ScalarProperty Name="nama" ColumnName="nama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Restoran1Model.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="nama" ColumnName="nama" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

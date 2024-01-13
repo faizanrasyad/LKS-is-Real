@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Restoran1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="idCustomer" />
+    </Key>
+    <Property Name="idCustomer" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nama" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="telp" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Meja">
+    <Key>
+      <PropertyRef Name="noMeja" />
+    </Key>
+    <Property Name="noMeja" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="jenis" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="kapasitas" Type="int" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="jenis" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="harga" Type="int" Nullable="false" />
+    <Property Name="nama" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Restoran1.dbo.Report' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Report">
+          <Property Name="reportNumber" Type="varchar" MaxLength="50" />
+          <Property Name="rangeStart" Type="date" />
+          <Property Name="rangeEnd" Type="date" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Restoran1.dbo.Transaksi' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Transaksi">
+          <Property Name="noTransaksi" Type="varchar" MaxLength="50" />
+          <Property Name="tanggalTransaksi" Type="date" />
+          <Property Name="statusTransaksi" Type="varchar" MaxLength="50" />
+          <Property Name="pembayaran" Type="varchar" MaxLength="50" />
+          <Property Name="statusPembayaran" Type="varchar" MaxLength="50" />
+          <Property Name="total" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="paid" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>-->
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nama" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="role" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Restoran1ModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meja" EntityType="Self.Meja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Restoran1.ui.fragments
+{
+    public partial class KustomerFragment : UserControl
+    {
+        public KustomerFragment()
+        {
+            InitializeComponent();
+        }
+    }
+}
