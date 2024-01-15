@@ -1,0 +1,16 @@
+C:\Users\moklet\source\repos\TryFast1\bin\Debug\TryFast1.exe.config
+C:\Users\moklet\source\repos\TryFast1\bin\Debug\TryFast1.exe
+C:\Users\moklet\source\repos\TryFast1\bin\Debug\TryFast1.pdb
+C:\Users\moklet\source\repos\TryFast1\bin\Debug\EntityFramework.dll
+C:\Users\moklet\source\repos\TryFast1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\moklet\source\repos\TryFast1\bin\Debug\EntityFramework.xml
+C:\Users\moklet\source\repos\TryFast1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\moklet\source\repos\TryFast1\obj\Debug\TryFast1.csproj.AssemblyReference.cache
+C:\Users\moklet\source\repos\TryFast1\obj\Debug\TryFast1.Form1.resources
+C:\Users\moklet\source\repos\TryFast1\obj\Debug\TryFast1.MainForm.resources
+C:\Users\moklet\source\repos\TryFast1\obj\Debug\TryFast1.Properties.Resources.resources
+C:\Users\moklet\source\repos\TryFast1\obj\Debug\TryFast1.csproj.GenerateResource.cache
+C:\Users\moklet\source\repos\TryFast1\obj\Debug\TryFast1.csproj.CoreCompileInputs.cache
+C:\Users\moklet\source\repos\TryFast1\obj\Debug\TryFast1.csproj.CopyComplete
+C:\Users\moklet\source\repos\TryFast1\obj\Debug\TryFast1.exe
+C:\Users\moklet\source\repos\TryFast1\obj\Debug\TryFast1.pdb
