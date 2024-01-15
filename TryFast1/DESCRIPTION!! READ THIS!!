@@ -1,0 +1,25 @@
+This is my time attack attempt on making a Login Page using DB and EF
+
+!! TIME  :: 21 MINUTES !!
+
+1. Login Page
+a. Validation:
+- Empty Pass or Email
+- Valid Email (Contains '@')
+b. See Through Password Field
+- Using a button to toggle the Password System on the Password Field
+c. DB and EF
+- Make the DB in the firsthand and then connecting it using ADO.NET and EF
+- Note: I blanked for a few seconds when I wanted to declare: 
+  public static User loggedInUser = null;
+
+2. MainForm
+a. Logout Button
+- A simple Logout Button wrapped inside a Panel
+b. I FORGOT OMG
+- Forgot to show the User's email and name on MainForm with onLoad method.
+
+3. Overall
+a. Slow typing
+b. Keeps forgetting the syntax
+c. Still slow on time
