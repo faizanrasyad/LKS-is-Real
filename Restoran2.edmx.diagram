@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="24f6b2d008bb4de8b358d79480035b8d" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="Restoran2Model.Customer" Width="1.5" PointX="0.875" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restoran2Model.Meja" Width="1.5" PointX="5.375" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restoran2Model.Menu" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restoran2Model.Report" Width="1.5" PointX="5.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restoran2Model.Transaksi" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restoran2Model.User" Width="1.5" PointX="2.125" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="Restoran2Model.FK_Transaksi_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="Restoran2Model.FK_Transaksi_Menu" ManuallyRouted="false" />
+        <AssociationConnector Association="Restoran2Model.FK_Report_Transaksi" ManuallyRouted="false" />
+        <AssociationConnector Association="Restoran2Model.FK_Transaksi_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
