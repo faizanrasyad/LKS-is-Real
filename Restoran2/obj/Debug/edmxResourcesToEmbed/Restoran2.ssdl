@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Restoran2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="idCustomer" />
+    </Key>
+    <Property Name="idCustomer" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nama" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="telp" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Meja">
+    <Key>
+      <PropertyRef Name="noMeja" />
+    </Key>
+    <Property Name="noMeja" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="jenis" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="kapasitas" Type="int" Nullable="false" />
+    <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="idMenu" />
+    </Key>
+    <Property Name="idMenu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="jenis" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="harga" Type="int" Nullable="false" />
+    <Property Name="nama" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Report">
+    <Key>
+      <PropertyRef Name="noReport" />
+    </Key>
+    <Property Name="noReport" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="rangeStart" Type="date" Nullable="false" />
+    <Property Name="rangeEnd" Type="date" Nullable="false" />
+    <Property Name="idTransaksi" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Transaksi">
+    <Key>
+      <PropertyRef Name="idTransaksi" />
+    </Key>
+    <Property Name="idTransaksi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tanggalTransaksi" Type="date" Nullable="false" />
+    <Property Name="statusTransaksi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pembayaran" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="statusPembayaran" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idCustomer" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="total" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="paid" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="idMenu" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="idUser" />
+    </Key>
+    <Property Name="idUser" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nama" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="role" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Report_Transaksi">
+    <End Role="Transaksi" Type="Self.Transaksi" Multiplicity="1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transaksi">
+        <PropertyRef Name="idTransaksi" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="idTransaksi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaksi_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Transaksi" Type="Self.Transaksi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="idCustomer" />
+      </Principal>
+      <Dependent Role="Transaksi">
+        <PropertyRef Name="idCustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaksi_Menu">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1" />
+    <End Role="Transaksi" Type="Self.Transaksi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="idMenu" />
+      </Principal>
+      <Dependent Role="Transaksi">
+        <PropertyRef Name="idMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaksi_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Transaksi" Type="Self.Transaksi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="idUser" />
+      </Principal>
+      <Dependent Role="Transaksi">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Restoran2ModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meja" EntityType="Self.Meja" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Report" EntityType="Self.Report" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transaksi" EntityType="Self.Transaksi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Report_Transaksi" Association="Self.FK_Report_Transaksi">
+      <End Role="Transaksi" EntitySet="Transaksi" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaksi_Customer" Association="Self.FK_Transaksi_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Transaksi" EntitySet="Transaksi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaksi_Menu" Association="Self.FK_Transaksi_Menu">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="Transaksi" EntitySet="Transaksi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaksi_User" Association="Self.FK_Transaksi_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Transaksi" EntitySet="Transaksi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
