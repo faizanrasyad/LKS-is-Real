@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Restoran3ModelStoreContainer" CdmEntityContainer="Restoran3Entities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="Restoran3Model.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nama" ColumnName="Nama" />
+          <ScalarProperty Name="Telepon" ColumnName="Telepon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mejas">
+      <EntityTypeMapping TypeName="Restoran3Model.Meja">
+        <MappingFragment StoreEntitySet="Meja">
+          <ScalarProperty Name="noMeja" ColumnName="noMeja" />
+          <ScalarProperty Name="Jenis" ColumnName="Jenis" />
+          <ScalarProperty Name="Kapasitas" ColumnName="Kapasitas" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="Restoran3Model.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="idMenu" ColumnName="idMenu" />
+          <ScalarProperty Name="Jenis" ColumnName="Jenis" />
+          <ScalarProperty Name="Harga" ColumnName="Harga" />
+          <ScalarProperty Name="Nama" ColumnName="Nama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reports">
+      <EntityTypeMapping TypeName="Restoran3Model.Report">
+        <MappingFragment StoreEntitySet="Report">
+          <ScalarProperty Name="idReport" ColumnName="idReport" />
+          <ScalarProperty Name="rangeStart" ColumnName="rangeStart" />
+          <ScalarProperty Name="rangeEnd" ColumnName="rangeEnd" />
+          <ScalarProperty Name="idTransaksi" ColumnName="idTransaksi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Transaksis">
+      <EntityTypeMapping TypeName="Restoran3Model.Transaksi">
+        <MappingFragment StoreEntitySet="Transaksi">
+          <ScalarProperty Name="idTransaksi" ColumnName="idTransaksi" />
+          <ScalarProperty Name="tanggalTransaksi" ColumnName="tanggalTransaksi" />
+          <ScalarProperty Name="statusTransaksi" ColumnName="statusTransaksi" />
+          <ScalarProperty Name="Pembayaran" ColumnName="Pembayaran" />
+          <ScalarProperty Name="statusPembayaran" ColumnName="statusPembayaran" />
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Restoran3Model.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nama" ColumnName="Nama" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="itemTransaksis">
+      <EntityTypeMapping TypeName="Restoran3Model.itemTransaksi">
+        <MappingFragment StoreEntitySet="itemTransaksi">
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="idMenu" ColumnName="idMenu" />
+          <ScalarProperty Name="idTransaksi" ColumnName="idTransaksi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
